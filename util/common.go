@@ -13,14 +13,14 @@ type RunArgs struct {
 	DebugMode bool
 }
 
-func Parse_args() RunArgs {
+func ParseRunArgs() RunArgs {
 	args := RunArgs{}
 	flag.BoolVar(&args.DebugMode, "debug", false, "Use debug mode")
 	flag.Parse()
 	return args
 }
 
-func Setup_logger(useDebugLevel bool) {
+func SetupLogger(useDebugLevel bool) {
 
 	level := slog.LevelInfo
 	if useDebugLevel {
