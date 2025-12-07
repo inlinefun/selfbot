@@ -21,7 +21,6 @@ func ParseRunArgs() RunArgs {
 }
 
 func SetupLogger(useDebugLevel bool) {
-
 	level := slog.LevelInfo
 	if useDebugLevel {
 		level = slog.LevelDebug
